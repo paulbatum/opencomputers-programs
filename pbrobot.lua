@@ -8,7 +8,7 @@ local robot = require("robot")
 -------------------------------------
 local lastRobotSlot = 16
 local rangeThreshold = 0.9
-local minY = 13
+local minY = 18
 local homeY = 50
 local lowEnergy = 5000
 local robotSide = sides.back
@@ -138,6 +138,7 @@ function pbrobot.goHome()
     print("going home")    
     local x,y,z = nav.getPosition()
     while y < homeY do
+    x,y,z = nav.getPosition()
         robot.swingUp()
         robot.up()
     end
