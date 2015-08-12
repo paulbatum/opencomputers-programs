@@ -52,6 +52,13 @@ function pbrobot.queueLayers(layerSize, count)
         pbrobot.queueWork("mineDown", 3)        
     end    
 end
+
+function pbrobot.queueLayersFine(layerSize, count)
+    for i=1,count do
+        pbrobot.queueMineLayerWorkFine(layerSize)
+        pbrobot.queueWork("mineDown", 1)        
+    end    
+end
     
 
 function pbrobot.queueMineLayerWork(layerSize)    
@@ -80,11 +87,37 @@ function pbrobot.queueMineLayerWork(layerSize)
     pbrobot.queueWork("turnRight")
 end
 
+function pbrobot.queueMineLayerWorkFine(layerSize)    
+
+    iterationRight = function()
+        pbrobot.queueWork("mineForward", layerSize-1)
+        pbrobot.queueWork("turnRight")
+        pbrobot.queueWork("mineForward")
+        pbrobot.queueWork("turnRight")
+    end
+
+    iterationLeft = function()
+        pbrobot.queueWork("mineForward", layerSize-1)
+        pbrobot.queueWork("turnLeft")
+        pbrobot.queueWork("mineForward", 1)
+        pbrobot.queueWork("turnLeft")
+    end
+
+    for i=1,math.floor(layerSize/2) + 1 do
+        iterationRight()
+        iterationLeft()    
+    end    
+    
+    pbrobot.queueWork("turnLeft")
+    pbrobot.queueWork("mineForward", layerSize)
+    pbrobot.queueWork("turnRight")
+end
+
 function pbrobot.queueWork(command, iterations)
     local work = {
         command = command,
         iterations = iterations or 1,   
-        retry = 3 
+        retry = 10 
     }
     work.execute = function()
         if commands[work.command]() then

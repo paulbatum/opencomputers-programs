@@ -1,0 +1,10 @@
+{
+  label = "Little Ores",
+  shapes = {
+    { 1,0,1,7,6,7,texture = "iron_ore" },
+    { 1,0,9,7,6,15,texture = "gold_ore" },
+    { 9,0,1,15,6,7,texture = "redstone_ore" },
+    { 9,0,9,15,6,15,texture = "lapis_ore" },
+    { 5,6,5,11,12,11,texture = "diamond_ore" },
+  }
+}
