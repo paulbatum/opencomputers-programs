@@ -31,5 +31,5 @@ else
 end
 
 local textures = map(textures.tryResolve, args)
-local b = pattern(unpack(textures))
+local b = pattern(table.unpack(textures))
 blocklib.print(b, count)
