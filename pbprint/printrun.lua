@@ -1,5 +1,7 @@
-local blocklib = require("./blocklib")
-local textures = require("./textures")
+package.loaded.blocklib = nil
+package.loaded.textures = nil
+local blocklib = require("blocklib")
+local textures = require("textures")
 
 local enderInfusedTyrian = blocklib.makeDualBlock10(textures.tyrian_dent, textures.ender_flow, "Ender Infused Tyrian")
 local redstoneInfusedTyrian = blocklib.makeDualBlock10(textures.tyrian_dent, textures.redstone_flow, "Redstone Infused Tyrian")

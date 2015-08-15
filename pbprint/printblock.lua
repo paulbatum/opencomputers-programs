@@ -1,8 +1,10 @@
 local component = require("component")
 local shell = require("shell")
 
-local blocklib = require("./blocklib")
-local textures = require("./textures")
+package.loaded.blocklib = nil
+package.loaded.textures = nil
+local blocklib = require("blocklib")
+local textures = require("textures")
 
 function map(func, array)
   local new_array = {}
