@@ -1,7 +1,8 @@
 local component = require("component")
 local shell = require("shell")
-local blocklib = require("blocklib")
-local textures = require("textures")
+
+local blocklib = require("./blocklib")
+local textures = require("./textures")
 
 function map(func, array)
   local new_array = {}
