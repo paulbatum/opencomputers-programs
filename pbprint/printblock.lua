@@ -14,5 +14,5 @@ if #args > 1 then
   count = assert(tonumber(args[2]), tostring(args[2]) .. " is not a valid count")
 end
 
-local b = blocklib.makeBlock(args[1], "3D Print")
+local b = blocklib.makeBlock(textures.tryResolve(args[1]), "3D Print")
 blocklib.print(b, count)
