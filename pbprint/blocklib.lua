@@ -12,6 +12,8 @@ blocklib.print = function(data, count)
 	end
 	if data.tooltip then
 	  printer.setTooltip(data.tooltip)
+	else
+	  printer.setTooltip("Paul Blocks (TM)")
 	end
 	if data.lightLevel and printer.setLightLevel then -- as of OC 1.5.7
 	  printer.setLightLevel(data.lightLevel)
@@ -50,6 +52,13 @@ blocklib.print = function(data, count)
 	else
 	  io.stderr:write("Failed committing job: " .. tostring(reason) .. "\n")
 	end
+end
+
+blocklib.makeBlock = function(texture, label)
+	return {
+		label = label,		
+		shapes = {{0,0,0,16,16,16, texture=texture}}
+	}
 end
 
 blocklib.makeDualBlock10 = function(texture_outer, texture_inner, label)
