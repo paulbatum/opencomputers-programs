@@ -54,16 +54,16 @@ blocklib.print = function(data, count)
   end
 end
 
-blocklib.makeBlock = function(texture, label)
-  return {
-    label = label,    
+blocklib.patterns = {}
+
+blocklib.patterns.block = function(texture)
+  return {    
     shapes = {{0,0,0,16,16,16, texture=texture}}
   }
 end
 
-blocklib.makeDualBlock10 = function(texture_outer, texture_inner, label)
-  return {
-    label = label,
+blocklib.patterns.dualBlock10 = function(texture_outer, texture_inner)
+  return {    
     shapes = {
       { 0,0,0,3,3,16,texture = texture_outer },
       { 3,0,0,16,3,3,texture = texture_outer },
