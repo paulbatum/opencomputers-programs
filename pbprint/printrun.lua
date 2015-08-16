@@ -1,7 +1,14 @@
+local component = require("component")
+local printer = component.printer3d
+
 package.loaded.blocklib = nil
 package.loaded.textures = nil
 local blocklib = require("blocklib")
 local textures = require("textures")
+
+function wait
+  while(printer.status() == "busy") do os.sleep(1000) end  
+end
 
 local enderInfusedTyrian = blocklib.patterns.inset_block_3(textures.tyrian_dent, textures.ender_flow)
 enderInfusedTyrian.label = "Ender Infused Tyrian"
@@ -15,5 +22,7 @@ local reinforcedEnderPipe = blocklib.compose(hollowTyrianTiles, obsidianEnderPip
 reinforcedEnderPipe.label = "Reinforced Ender Pipe"
 
 blocklib.print(enderInfusedTyrian, 1)
+wait()
 blocklib.print(redstoneInfusedTyrian, 1)
+wait()
 blocklib.print(reinforcedEnderPipe, 1)
