@@ -63,6 +63,7 @@ blocklib.compose = function(a, b)
   for _,v in pairs(b.shapes) do 
     table.insert(result, v)
   end  
+  return result
 end
 
 blocklib.patterns = {}
