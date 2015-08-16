@@ -11,6 +11,8 @@ textures = {
   ender_flow = "thermalfoundation:fluid/Fluid_Ender_Flow",
   redstone_flow = "thermalfoundation:fluid/Fluid_Redstone_Flow",
   redstone_still = "thermalfoundation:fluid/Fluid_Redstone_Still",
+  crafting_unit = "appliedenergistics2:BlockCraftingUnit",
+  crafting_unit_fit = "appliedenergistics2:BlockCraftingUnitFit",
 }
 
 textures.tryResolve = function (texture)
