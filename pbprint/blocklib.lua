@@ -161,6 +161,21 @@ blocklib.patterns.hollow_block_3 = hollow_block(3)
 blocklib.patterns.hollow_block_4 = hollow_block(4)
 blocklib.patterns.hollow_block_5 = hollow_block(5)
 
+blocklib.patterns.checker = function(texture1, texture2)
+  return {
+    shapes = {
+      { 0,0,0,8,8,8,texture = texture1 },
+      { 0,0,8,8,8,16,texture = texture2 },
+      { 8,0,0,16,8,8,texture = texture2 },
+      { 8,0,8,16,8,16,texture = texture1 },
+      { 0,8,0,8,16,8,texture = texture2 },
+      { 0,8,8,8,16,16,texture = texture1 },
+      { 8,8,0,16,16,8,texture = texture1 },
+      { 8,8,8,16,16,16,texture = texture2 },
+    }
+  }
+end
+
 blocklib.patterns.inner_pipe = function(texture_outer, texture_inner) 
   return {    
     shapes = {
