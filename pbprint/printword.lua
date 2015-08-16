@@ -16,22 +16,12 @@ end
 local word = tostring(args[1])
 local tint = textures.tryResolve(args[2])
 
-function waitForPrinter()
-  while printer.status() == "busy" do os.sleep(1) end  
-end
-
-function printWord(word, tint)
-  function printLetter(c)  
-    local pattern = blocklib.patterns["alphabet_" .. c]
-    if pattern then
-      blocklib.print(pattern(textures.blank, tint), 1)
-      waitForPrinter()
-    else
-      io.write("Unknown pattern: " .. c .. "\n")
-    end
+for c in string.gmatch(word, ".") do
+  local pattern = blocklib.patterns["alphabet_" .. c]
+  if pattern then
+    blocklib.print(pattern(textures.blank, tint), 1)      
+  else
+    io.write("Unknown pattern: " .. c .. "\n")
   end
-
-  string.gsub(word, ".", printLetter)
-end
-
-printWord(word, tint)
+  while printer.status() == "busy" do os.sleep(1) end  
+end  

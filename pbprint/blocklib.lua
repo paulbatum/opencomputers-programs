@@ -271,7 +271,7 @@ blocklib.patterns.alphabet_s = function(texture, tint)
   return {
     label = "S",
     shapes = {      
-      { 4,0,12,12,1,16,texture = texture, tint = tint },
+      { 4,0,12,12,2,16,texture = texture, tint = tint },
       { 10,1,12,12,8,16,texture = texture, tint = tint },
       { 4,6,12,12,8,16,texture = texture, tint = tint },
       { 4,8,12,6,14,16,texture = texture, tint = tint },
