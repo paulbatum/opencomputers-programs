@@ -56,12 +56,14 @@ blocklib.print = function(data, count)
 end
 
 blocklib.compose = function(a, b)
-  local result = {}
+  local result = {
+    shapes = {}
+  }
   for _,v in pairs(a.shapes) do 
-    table.insert(result, v)
+    table.insert(result.shapes, v)
   end  
   for _,v in pairs(b.shapes) do 
-    table.insert(result, v)
+    table.insert(result.shapes, v)
   end  
   return result
 end
