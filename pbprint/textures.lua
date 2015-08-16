@@ -7,6 +7,7 @@ textures = {
   laboratory_largetile = "chisel:laboratory/largetile",
   laboratory_checker = "chisel:laboratory/checkertile",
   laboratory_fuzzy = "chisel:laboratory/fuzzyscreen",
+  laboratory_steeltile = "chisel:laboratory/smallsteel-side",
   voidstone_smooth = "chisel:voidstone/smooth",
   diamond_obsidian = "chisel:diamond/terrain-diamond-space-side",  
   ender_flow = "thermalfoundation:fluid/Fluid_Ender_Flow",

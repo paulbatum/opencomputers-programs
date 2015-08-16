@@ -161,7 +161,7 @@ blocklib.patterns.hollow_block_3 = hollow_block(3)
 blocklib.patterns.hollow_block_4 = hollow_block(4)
 blocklib.patterns.hollow_block_5 = hollow_block(5)
 
-blocklib.patterns.checker = function(texture1, texture2)
+blocklib.patterns.checker_block = function(texture1, texture2)
   return {
     shapes = {
       { 0,0,0,8,8,8,texture = texture1 },
