@@ -220,7 +220,7 @@ blocklib.patterns.inner_pipe = function(texture_outer, texture_inner)
   }
 end
 
-blocklib.pattern.alphabet_a = function(texture, tint)
+blocklib.patterns.alphabet_a = function(texture, tint)
   return {
     label = "A",
     shapes = {
