@@ -3,7 +3,17 @@ package.loaded.textures = nil
 local blocklib = require("blocklib")
 local textures = require("textures")
 
-local enderInfusedTyrian = blocklib.makeDualBlock10(textures.tyrian_dent, textures.ender_flow, "Ender Infused Tyrian")
-local redstoneInfusedTyrian = blocklib.makeDualBlock10(textures.tyrian_dent, textures.redstone_flow, "Redstone Infused Tyrian")
+local enderInfusedTyrian = blocklib.patterns.inset_block_3(textures.tyrian_dent, textures.ender_flow)
+enderInfusedTyrian.label = "Ender Infused Tyrian"
+
+local redstoneInfusedTyrian = blocklib.patterns.inset_block_3(textures.tyrian_dent, textures.redstone_flow)
+redstoneInfusedTyrian.label = "Redstone Infused Tyrian"
+
+local hollowTyrianTiles = blocklib.patterns.hollow_block_4(textures.tyrian_tiles)
+local obsidianEnderPipe = blocklib.patterns.inner_pipe("obsidian",textures.ender_flow)
+local reinforcedEnderPipe = blocklib.compose(hollowTyrianTiles, obsidianEnderPipe)
+reinforcedEnderPipe.label = "Reinforced Ender Pipe"
+
 blocklib.print(enderInfusedTyrian, 1)
 blocklib.print(redstoneInfusedTyrian, 1)
+blocklib.print(reinforcedEnderPipe, 1)

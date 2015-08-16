@@ -55,6 +55,16 @@ blocklib.print = function(data, count)
   end
 end
 
+blocklib.compose = function(a, b)
+  local result = {}
+  for _,v in pairs(a.shapes) do 
+    table.insert(result, v)
+  end  
+  for _,v in pairs(b.shapes) do 
+    table.insert(result, v)
+  end  
+end
+
 blocklib.patterns = {}
 
 blocklib.patterns.block = function(texture)
