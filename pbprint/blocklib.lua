@@ -108,6 +108,33 @@ blocklib.patterns.inset_block_3 = inset_block(3)
 blocklib.patterns.inset_block_4 = inset_block(4)
 blocklib.patterns.inset_block_5 = inset_block(5)
 
+function inset3d_block(x)
+  return function (texture_outer, texture_inner) 
+    return {
+      shapes = {
+        { 0,0,0,x,16,x,texture = texture_outer },
+        { 0,0,16-x,x,16,16,texture = texture_outer },
+        { 16-x,0,0,16,16,x,texture = texture_outer },
+        { 16-x,0,16-x,16,16,16,texture = texture_outer },
+        { 0,0,x,x,x,16-x,texture = texture_outer },
+        { x,0,0,16-x,x,x,texture = texture_outer },
+        { x,0,16-x,16-x,x,16,texture = texture_outer },
+        { 16-x,0,x,16,x,16-x,texture = texture_outer },
+        { 0,16-x,x,x,16,16-x,texture = texture_outer },
+        { x,16-x,0,16-x,16,x,texture = texture_outer },
+        { x,16-x,16-x,16-x,16,16,texture = texture_outer },
+        { 16-x,16-x,x,16,16,16-x,texture = texture_outer },
+        { x,x,x,16-x,16-x,16-x,texture = texture_inner },        
+      }
+    }
+  end
+end
+
+blocklib.patterns.inset3d_block_2 = inset3d_block(2)
+blocklib.patterns.inset3d_block_3 = inset3d_block(3)
+blocklib.patterns.inset3d_block_4 = inset3d_block(4)
+blocklib.patterns.inset3d_block_5 = inset3d_block(5)
+
 function hollow_block(x)
   return function (texture_outer) 
     return {
