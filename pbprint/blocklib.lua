@@ -232,4 +232,63 @@ blocklib.patterns.alphabet_a = function(texture, tint)
   }
 end
 
+blocklib.patterns.alphabet_b = function(texture, tint)
+  return {
+    label = "B",
+    shapes = {
+      { 4,0,12,6,14,16,texture = texture, tint = tint },
+      { 6,0,12,12,2,16,texture = texture, tint = tint },
+      { 10,2,12,12,14,16,texture = texture, tint = tint },
+      { 6,6,12,12,8,16,texture = texture, tint = tint },
+      { 6,12,12,12,14,16,texture = texture, tint = tint },
+    }
+  }
+end
+
+blocklib.patterns.alphabet_l = function(texture, tint)
+  return {
+    label = "L",
+    shapes = {
+      { 4,0,12,6,14,16,texture = texture, tint = tint },
+      { 6,0,12,12,2,16,texture = texture, tint = tint },      
+    }
+  }
+end
+
+blocklib.patterns.alphabet_p = function(texture, tint)
+  return {
+    label = "P",
+    shapes = {
+      { 4,0,12,6,14,16,texture = texture, tint = tint },
+      { 6,6,12,12,8,16,texture = texture, tint = tint },
+      { 10,8,12,12,14,16,texture = texture, tint = tint },
+      { 6,12,12,12,14,16,texture = texture, tint = tint },
+    }
+  }
+end
+
+blocklib.patterns.alphabet_s = function(texture, tint)
+  return {
+    label = "S",
+    shapes = {      
+      { 4,0,12,12,1,16,texture = texture, tint = tint },
+      { 10,1,12,12,8,16,texture = texture, tint = tint },
+      { 4,6,12,12,8,16,texture = texture, tint = tint },
+      { 4,8,12,6,14,16,texture = texture, tint = tint },
+      { 6,12,12,12,14,16,texture = texture, tint = tint },
+    }
+  }
+end
+
+blocklib.patterns.alphabet_u = function(texture, tint)
+  return {
+    label = "U",
+    shapes = {      
+      { 4,0,12,6,14,16,texture = texture, tint = tint },
+      { 6,0,12,12,2,16,texture = texture, tint = tint },
+      { 10,2,12,12,14,16,texture = texture, tint = tint },
+    }
+  }
+end
+
 return blocklib
