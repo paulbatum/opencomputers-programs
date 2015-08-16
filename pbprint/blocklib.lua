@@ -237,10 +237,11 @@ blocklib.patterns.alphabet_b = function(texture, tint)
     label = "B",
     shapes = {
       { 4,0,12,6,14,16,texture = texture, tint = tint },
-      { 6,0,12,12,2,16,texture = texture, tint = tint },
-      { 10,2,12,12,14,16,texture = texture, tint = tint },
+      { 6,0,12,11,2,16,texture = texture, tint = tint },
+      { 11,1,12,12,13,16,texture = texture, tint = tint },
+      { 10,2,12,12,13,16,texture = texture, tint = tint },
       { 6,6,12,12,8,16,texture = texture, tint = tint },
-      { 6,12,12,12,14,16,texture = texture, tint = tint },
+      { 6,12,12,11,14,16,texture = texture, tint = tint },
     }
   }
 end
