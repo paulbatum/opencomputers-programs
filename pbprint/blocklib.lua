@@ -1,5 +1,6 @@
 local component = require("component")
 
+
 local blocklib = {}
 
 blocklib.print = function(data, count)
@@ -61,6 +62,39 @@ blocklib.patterns.block = function(texture)
     shapes = {{0,0,0,16,16,16, texture=texture}}
   }
 end
+
+function inset_block(x)
+  return function (texture_outer, texture_inner) 
+    return {
+      shapes = {
+        { 0,0,0,x,16,x,texture = texture_outer },
+        { 0,0,16-x,x,16,16,texture = texture_outer },
+        { 16-x,0,0,16,16,x,texture = texture_outer },
+        { 16-x,0,16-x,16,16,16,texture = texture_outer },
+        { 0,0,x,x,x,16-x,texture = texture_outer },
+        { x,0,0,16-x,x,x,texture = texture_outer },
+        { x,0,16-x,16-x,x,16,texture = texture_outer },
+        { 16-x,0,x,16,x,16-x,texture = texture_outer },
+        { 0,16-x,x,x,16,16-x,texture = texture_outer },
+        { x,16-x,0,16-x,16,x,texture = texture_outer },
+        { x,16-x,16-x,16-x,16,16,texture = texture_outer },
+        { 16-x,16-x,x,16,16,16-x,texture = texture_outer },
+        { x,0,x,16-x,x,16-x,texture = texture_inner },
+        { 0,x,x,x,16-x,16-x,texture = texture_inner },
+        { x,x,0,16-x,16-x,x,texture = texture_inner },
+        { x,x,16-x,16-x,16-x,16,texture = texture_inner },
+        { 16-x,x,x,16,16-x,16-x,texture = texture_inner },
+        { x,16-x,x,16-x,16,16-x,texture = texture_inner },
+      }
+    }
+  end
+end
+
+blocklib.patterns.inset_block_2 = inset_block(2)
+blocklib.patterns.inset_block_3 = inset_block(3)
+blocklib.patterns.inset_block_4 = inset_block(4)
+blocklib.patterns.inset_block_5 = inset_block(5)
+
 
 blocklib.patterns.dualBlock10 = function(texture_outer, texture_inner)
   return {    

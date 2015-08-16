@@ -24,12 +24,12 @@ end
 local patternName = tostring(table.remove(args,1))
 local pattern = blocklib.patterns[patternName]
 if pattern then
-  io.write("Using pattern:" .. patternName)
+  io.write("Using pattern: " .. patternName .. "\n")
 else
-  io.write("Unrecognized pattern: " .. patternName)
+  io.write("Unrecognized pattern: " .. patternName .. "\n")
   os.exit(0)
 end
 
 local textures = map(textures.tryResolve, args)
 local b = pattern(table.unpack(textures))
-blocklib.print(b, count)
+blocklib.print(b, 1)
