@@ -16,6 +16,8 @@ textures = {
   redstone_still = "thermalfoundation:fluid/Fluid_Redstone_Still",
   crafting_unit = "appliedenergistics2:BlockCraftingUnit",
   crafting_unit_fit = "appliedenergistics2:BlockCraftingUnitFit",
+
+  orange = 0xfc6400,
 }
 
 textures.tryResolve = function (texture)
