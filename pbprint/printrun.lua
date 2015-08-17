@@ -7,7 +7,7 @@ local blocklib = require("blocklib")
 local textures = require("textures")
 
 function waitForPrinter()
-  while printer.status() == "busy" do os.sleep(1) end  
+  while printer.status() == "busy" do os.sleep(5) end  
 end
 
 local enderInfusedTyrian = blocklib.patterns.inset_block_3(textures.tyrian_dent, textures.ender_flow)
@@ -30,7 +30,12 @@ tyrianDragonTiles.label = "Tyrian Dragon Tiles"
 local labTyrianInsetTiles = blocklib.patterns.inset_block_4(textures.laboratory_largetile, textures.tyrian_tile)
 labTyrianInsetTiles.label = "Laboratory Tile with Tyrian"
 
-blocklib.print(tyrianDragonTiles, 24)
+local labTyrianCheckerTiles = blocklib.patterns.inset_block_4(textures.laboratory_checker, textures.tyrian_tile)
+labTyrianCheckerTiles.label = "Laboratory Tyrian Checker"
+
+blocklib.print(tyrianDragonTiles, 19)
 waitForPrinter()
-blocklib.print(labTyrianInsetTiles, 32)
+
+blocklib.print(labTyrianCheckerTiles, 32)
 waitForPrinter()
+
