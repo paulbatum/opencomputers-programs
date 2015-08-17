@@ -2,6 +2,7 @@ local textures = {}
 
 textures = {  
   blank = "opencomputers:White",
+  glass_dungeon = "Chisel:glass/terrain-glassdungeon",
   tyrian_dent = "chisel:tyrian/dent",  
   tyrian_tile = "chisel:tyrian/platetiles",
   tyrian_plate = "chisel:tyrian/plate",
