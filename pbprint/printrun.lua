@@ -27,7 +27,7 @@ enderInfusedTyrianTiles.label = "Ender Tyrian"
 local tyrianDragonTiles = blocklib.patterns.inset_block_4(textures.tyrian_tile, "dragon_egg")
 tyrianDragonTiles.label = "Tyrian Dragon Tiles"
 
-local labTyrianInsetTiles = blocklib.pattern.inset_block_4(textures.laboratory_largetile, textures.tyrian_tile)
+local labTyrianInsetTiles = blocklib.patterns.inset_block_4(textures.laboratory_largetile, textures.tyrian_tile)
 labTyrianInsetTiles.label = "Laboratory Tile with Tyrian"
 
 blocklib.print(tyrianDragonTiles, 24)
