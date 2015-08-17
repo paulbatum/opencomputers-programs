@@ -220,6 +220,50 @@ blocklib.patterns.inner_pipe = function(texture_outer, texture_inner)
   }
 end
 
+blocklib.patterns.inner_pipe_h = function(texture_outer, texture_inner) 
+  return {    
+    shapes = {
+      { 0,6,6,16,10,10,texture = texture_inner },
+      { 0,5,5,16,6,6,texture = texture_outer },
+      { 0,5,6,1,6,7,texture = texture_outer },
+      { 0,5,9,1,6,11,texture = texture_outer },
+      { 1,5,10,16,6,11,texture = texture_outer },
+      { 5,5,6,6,6,7,texture = texture_outer },
+      { 5,5,9,6,6,11,texture = texture_outer },
+      { 10,5,6,11,6,7,texture = texture_outer },
+      { 10,5,9,11,6,11,texture = texture_outer },
+      { 15,5,6,16,6,7,texture = texture_outer },
+      { 15,5,9,16,6,11,texture = texture_outer },
+      { 0,6,5,1,7,6,texture = texture_outer },
+      { 0,6,10,1,7,11,texture = texture_outer },
+      { 5,6,5,6,7,6,texture = texture_outer },
+      { 5,6,10,6,7,11,texture = texture_outer },
+      { 10,6,5,11,7,6,texture = texture_outer },
+      { 10,6,10,11,7,11,texture = texture_outer },
+      { 15,6,5,16,7,6,texture = texture_outer },
+      { 15,6,10,16,7,11,texture = texture_outer },
+      { 0,9,5,1,11,6,texture = texture_outer },
+      { 0,9,10,1,11,11,texture = texture_outer },
+      { 5,9,5,6,11,6,texture = texture_outer },
+      { 5,9,10,6,11,11,texture = texture_outer },
+      { 10,9,5,11,11,6,texture = texture_outer },
+      { 10,9,10,11,11,11,texture = texture_outer },
+      { 15,9,5,16,11,6,texture = texture_outer },
+      { 15,9,10,16,11,11,texture = texture_outer },
+      { 0,10,6,1,11,7,texture = texture_outer },
+      { 0,10,9,1,11,11,texture = texture_outer },
+      { 1,10,5,16,11,6,texture = texture_outer },
+      { 1,10,10,16,11,11,texture = texture_outer },
+      { 5,10,6,6,11,7,texture = texture_outer },
+      { 5,10,9,6,11,11,texture = texture_outer },
+      { 10,10,6,11,11,7,texture = texture_outer },
+      { 10,10,9,11,11,11,texture = texture_outer },
+      { 15,10,6,16,11,7,texture = texture_outer },
+      { 15,10,9,16,11,11,texture = texture_outer },
+    }
+  }
+end
+
 blocklib.patterns.alphabet_a = function(texture, tint)
   return {
     label = "A",
