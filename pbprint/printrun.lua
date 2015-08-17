@@ -28,13 +28,10 @@ local tyrianDragonTiles = blocklib.patterns.inset_block_4(textures.tyrian_tile, 
 tyrianDragonTiles.label = "Tyrian Dragon Tiles"
 
 local labTyrianInsetTiles = blocklib.patterns.inset_block_4(textures.laboratory_largetile, textures.tyrian_tile)
-labTyrianInsetTiles.label = "Laboratory Tile with Tyrian"
+labTyrianInsetTiles.label = "Lab Tyrian Tile"
 
-local labTyrianCheckerTiles = blocklib.patterns.inset_block_4(textures.laboratory_checker, textures.tyrian_tile)
-labTyrianCheckerTiles.label = "Laboratory Tyrian Checker"
-
-blocklib.print(tyrianDragonTiles, 19)
-waitForPrinter()
+local labTyrianCheckerTiles = blocklib.patterns.checker_block(textures.laboratory_checker, textures.tyrian_tile)
+labTyrianCheckerTiles.label = "Lab Tyrian Checker"
 
 blocklib.print(labTyrianCheckerTiles, 32)
 waitForPrinter()
