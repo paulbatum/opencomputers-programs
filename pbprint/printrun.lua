@@ -17,7 +17,7 @@ local redstoneInfusedTyrian = blocklib.patterns.inset_block_3(textures.tyrian_de
 redstoneInfusedTyrian.label = "Redstone Infused Tyrian"
 
 local hollowTyrianTiles = blocklib.patterns.hollow_block_4(textures.tyrian_tile)
-local obsidianEnderPipe = blocklib.patterns.inner_pipe("obsidian",textures.ender_flow)
+local obsidianEnderPipe = blocklib.patterns.inner_pipe_h("obsidian",textures.ender_flow)
 local reinforcedEnderPipe = blocklib.compose(hollowTyrianTiles, obsidianEnderPipe)
 reinforcedEnderPipe.label = "Reinforced Ender Pipe"
 
@@ -25,7 +25,5 @@ local enderInfusedTyrianTiles = blocklib.patterns.inset3d_block_4(textures.tyria
 enderInfusedTyrianTiles.label = "Ender Infused Tyrian Tiles"
 
 
-blocklib.print(reinforcedEnderPipe, 16)
-waitForPrinter()
-blocklib.print(enderInfusedTyrianTiles, 8)
+blocklib.print(reinforcedEnderPipe, 8)
 waitForPrinter()
