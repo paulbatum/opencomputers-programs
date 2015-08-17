@@ -33,6 +33,9 @@ labTyrianInsetTiles.label = "Lab Tyrian Tile"
 local labTyrianCheckerTiles = blocklib.patterns.checker_block(textures.laboratory_checker, textures.tyrian_tile)
 labTyrianCheckerTiles.label = "Lab Tyrian Checker"
 
-blocklib.print(labTyrianCheckerTiles, 32)
+local tyrianCheckerGlass = blocklib.patterns.checker_block(textures.tyrian_tile, textures.glass_dungeon)
+tyrianDungeonGlassChecker = "Tyrian Checker Glass"
+
+blocklib.print(tyrianCheckerGlass, 32)
 waitForPrinter()
 
