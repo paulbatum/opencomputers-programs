@@ -22,8 +22,15 @@ local reinforcedEnderPipe = blocklib.compose(hollowTyrianTiles, obsidianEnderPip
 reinforcedEnderPipe.label = "Reinforced Ender Pipe"
 
 local enderInfusedTyrianTiles = blocklib.patterns.inset3d_block_4(textures.tyrian_tile, textures.ender_flow)
-enderInfusedTyrianTiles.label = "Ender Infused Tyrian Tiles"
+enderInfusedTyrianTiles.label = "Ender Tyrian"
 
+local tyrianDragonTiles = blocklib.patterns.inset_block_4(textures.tyrian_tile, "dragon_egg")
+tyrianDragonTiles.label = "Tyrian Dragon Tiles"
 
-blocklib.print(reinforcedEnderPipe, 8)
+local labTyrianInsetTiles = blocklib.pattern.inset_block_4(textures.laboratory_largetile, textures.tyrian_tile)
+labTyrianInsetTiles.label = "Laboratory Tile with Tyrian"
+
+blocklib.print(tyrianDragonTiles, 24)
+waitForPrinter()
+blocklib.print(labTyrianInsetTiles, 32)
 waitForPrinter()
