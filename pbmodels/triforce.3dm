@@ -1,0 +1,19 @@
+{
+  label = "Triforce",
+  tooltip = "Paul Blocks (TM)"
+  shapes = {
+    { 0,0,4,16,1,12,texture = "gold_block" },
+    { 0,1,4,7,2,12,texture = "gold_block" },
+    { 9,1,4,16,2,12,texture = "gold_block" },
+    { 1,2,4,6,4,12,texture = "gold_block" },
+    { 10,2,4,15,4,12,texture = "gold_block" },
+    { 2,4,4,5,6,12,texture = "gold_block" },
+    { 11,4,4,14,6,12,texture = "gold_block" },
+    { 3,6,4,4,8,12,texture = "gold_block" },
+    { 12,6,4,13,8,12,texture = "gold_block" },
+    { 4,8,4,12,10,12,texture = "gold_block" },
+    { 5,10,4,11,12,12,texture = "gold_block" },
+    { 6,12,4,10,14,12,texture = "gold_block" },
+    { 7,14,4,9,16,12,texture = "gold_block" },
+  }
+}
