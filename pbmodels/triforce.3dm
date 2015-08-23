@@ -1,6 +1,6 @@
 {
   label = "Triforce",
-  tooltip = "Paul Blocks (TM)"
+  tooltip = "Paul Blocks (TM)",
   shapes = {
     { 0,0,4,16,1,12,texture = "gold_block" },
     { 0,1,4,7,2,12,texture = "gold_block" },
