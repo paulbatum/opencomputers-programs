@@ -435,7 +435,7 @@ blocklib.patterns.alphabet_s = function(texture, tint)
   }
 end
 
-blocklib.patterns.alphabet_s = function(texture, tint)
+blocklib.patterns.alphabet_t = function(texture, tint)
   return {
     label = "T",
     shapes = {      
