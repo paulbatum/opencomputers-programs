@@ -2,7 +2,7 @@
   label = "Aur's Pink Zombie",
   tooltip = "Paul Blocks (TM)",
   shapes = {
-    { 3,0,3,13,3,13,texture = "opencomputers:White", tint = 0xeeeeee },
+    { 3,0,3,13,3,13,texture = "openblocks:trophy" },
     { 6,3,6,10,4,9,texture = "opencomputers:White", tint = 0x555555 },
     { 6,4,7,8,8,9,texture = "opencomputers:White", tint = 0xdb4d6d },
     { 8,4,7,10,8,9,texture = "opencomputers:White", tint = 0xb5495b },
