@@ -1,0 +1,20 @@
+{
+  label = "Aur's Pink Zombie",
+  tooltip = "Paul Blocks (TM)",
+  shapes = {
+    { 3,0,3,13,3,13,texture = "opencomputers:White", tint = 0xeeeeee },
+    { 6,3,6,10,4,9,texture = "opencomputers:White", tint = 0x555555 },
+    { 6,4,7,8,8,9,texture = "opencomputers:White", tint = 0xdb4d6d },
+    { 8,4,7,10,8,9,texture = "opencomputers:White", tint = 0xb5495b },
+    { 6,8,7,10,12,9,texture = "opencomputers:White", tint = 0xe87a90 },
+    { 4,10,3,6,12,7,texture = "opencomputers:White", tint = 0x26453d },
+    { 4,10,7,12,12,9,texture = "opencomputers:White", tint = 0xe87a90 },
+    { 10,10,3,12,12,7,texture = "opencomputers:White", tint = 0x26453d },
+    { 6,12,6,10,14,9,texture = "opencomputers:White", tint = 0x26453d },
+    { 6,14,6,7,15,7,texture = "opencomputers:White", tint = 0xeeeeee },
+    { 6,14,7,10,16,9,texture = "opencomputers:White", tint = 0x26453d },
+    { 7,14,6,9,16,9,texture = "opencomputers:White", tint = 0x26453d },
+    { 9,14,6,10,15,7,texture = "opencomputers:White", tint = 0xeeeeee },
+    { 6,15,6,10,16,9,texture = "opencomputers:White", tint = 0x26453d },
+  }
+}
